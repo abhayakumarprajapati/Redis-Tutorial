@@ -1,5 +1,5 @@
 const express = require("express")
-const { getProducts } = require("./api")
+// const { getProducts } = require("./api")
 // const Redis = require('ioredis')
 
 const app = express()

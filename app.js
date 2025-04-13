@@ -1,18 +1,18 @@
 const express = require("express")
 const { getProducts } = require("./api")
-const Redis = require('ioredis')
+// const Redis = require('ioredis')
 
 const app = express()
 //changes
-const redis = new Redis({
-    host: "",
-    port: "",
-    password: ""
-})
+// const redis = new Redis({
+//     host: "",
+//     port: "",
+//     password: ""
+// })
 
-redis.on("connect", () => {
-    console.log("redis connectd")
-})
+// redis.on("connect", () => {
+//     console.log("redis connectd")
+// })
 
 app.get('/', (req, res) => {
     res.send("hello")

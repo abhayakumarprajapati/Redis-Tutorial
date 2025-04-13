@@ -15,7 +15,7 @@ const app = express()
 // })
 
 app.get('/', (req, res) => {
-    res.send("hello")
+    res.send("hello world")
 })
 
 // app.get('/products', async (req, res) => {

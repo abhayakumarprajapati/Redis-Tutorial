@@ -131,7 +131,7 @@ function getTodaysQuote() {
   return todaysQuote;
 }
 
-//added
+
 // Route
 app.get('/', (req, res) => {
   const now = new Date();

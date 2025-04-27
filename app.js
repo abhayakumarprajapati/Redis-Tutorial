@@ -136,6 +136,10 @@ function getTodaysQuote() {
 app.get('/', (req, res) => {
   const now = new Date();
 
+  // Format time in IST (Indian Standard Time)
+  const options = { timeZone: 'Asia/Kolkata', hour12: true };
+  const formattedTime = now.toLocaleString('en-IN', options); // This formats the time in IST
+
   const html = `
     <html>
       <head>
@@ -143,7 +147,7 @@ app.get('/', (req, res) => {
       </head>
       <body style="font-family: Arial; text-align: center; margin-top: 50px;">
         <h1>Current Date and Time</h1>
-        <p>${now.toLocaleString()}</p>
+        <p>${formattedTime}</p>
         <h2>Today's Motivation:</h2>
         <blockquote style="font-size: 24px; font-style: italic; color: #555;">"${getTodaysQuote()}"</blockquote>
       </body>
